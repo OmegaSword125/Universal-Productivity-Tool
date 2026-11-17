@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upt-markdown"
+version = "1.0.0b1"
+description = "A local-first desktop Markdown editor"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/*.txt"]
+dependencies = ["PySide6-Essentials==6.8.3", "Markdown==3.7"]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5"]
+
+[project.gui-scripts]
+upt = "upt.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

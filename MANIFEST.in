@@ -1,0 +1,5 @@
+include .gitignore LICENSE README.md THIRD_PARTY_NOTICES.md requirements*.txt run_upt.py Launch-UPT.cmd
+recursive-include docs *.md *.png
+recursive-include examples *.md
+recursive-include tests *.py
+recursive-include licenses *
